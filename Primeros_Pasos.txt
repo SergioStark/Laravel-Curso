@@ -1,0 +1,38 @@
+0. Crear repositorio en Github
+1. Instalar XAMPP -> MySQL, Apache/Nginx
+2. Instalar Composer -> Instalar dependencias de PHP
+3. Instalar Github Desktop -> Commits y repo
+4. Instalar
+Editores de texto
+
+
+
+Todos los controladores de la aplicación.
+app-> http-> controllers
+Middleware
+
+llamadas a la base de datos:
+database->migrations
+
+vistas:
+resources->views
+
+rutas del sitio:
+routers->web
+
+storage:
+guardar cosasalmacenar datos que generen los usuarios
+
+test:
+testeo
+
+.env -> se guardan todos los datos sensibles de la aplicacion
+.env.example -> se guardan datos sensibles para prueba -> este es el que se sube a github
+
+.gitignore -> archivos que no se deven subir al repositorio -> aqui se agregan apra que no se suban a github
+
+artisan -> permite ejecutar comandos en la consola.
+
+server.php -> va a hacer la funcinalidad de apache.
+
+php artisan web --> ejecutar servidor local desde la consola cmd
