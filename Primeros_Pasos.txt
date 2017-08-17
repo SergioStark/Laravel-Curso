@@ -36,3 +36,25 @@ artisan -> permite ejecutar comandos en la consola.
 server.php -> va a hacer la funcinalidad de apache.
 
 php artisan web --> ejecutar servidor local desde la consola cmd
+
+para hacer la migracion de la base de datos de larabel al administrador de base de datos, usar el siguiente comando sobre el cmd:
+php artisan migrate
+
+
+Renderizador de laravel para las vistas: blade
+En la documentacion de la pagina: Frontend -> Blade Templates
+
+Dudas con las sintaxis de los comandos de laravel -> cmd -> php artisan help make:migration
+
+composer "dump-autoload" cada que eliminemos algo del proyecto manualmente.
+
+php artisan make:migration create_tareas_table --create=tareas 
+
+tipos de datos que podemos utilizar para crear tablas en laravel -> documentacion -> database -> migrations
+
+EN MIGRACIONES ES DONDE SE ESPECIFICA LA ESTRUCTURA DE LA BASE DE DATOS
+
+Si marca error de que la llave esta muy larga es por que la version del apache no es compatible con la que usa laravel, hay que cambiarlo de la siguiente forma:
+documentacion->Indexes->Index Lengths & MySQL / MariaDB
+
+Para actualizar la estructura de la tabla: php artisan migrate:refresh
