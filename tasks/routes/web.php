@@ -40,5 +40,10 @@ Route::get('/tareas', function(){
 
 	$tareas = DB::table('tareas')->get();
 	//dd($tareas[0]->titulo);
-	return view('tareas',compact('tareas'));
+	return view('tareas.index',compact('tareas'));
+});
+
+Route::get('/tareas/{id}',function($id){
+	$tarea = DB::table('tareas')->find($id); //find, busca algo por medio del id
+	return view('tareas.show',compact('tarea'));
 });

@@ -5,15 +5,12 @@
 	<title>Tareas</title>
 </head>
 <body>
-	<!--ul>
-		<?php foreach ($tareas as $tarea):?>
-		<li><?= $tarea ?></li>
-	<?php endforeach; ?>
-	</ul-->
-
+	<h1>TAREAS</h1>
 	<ul>
 		@foreach($tareas as $tarea)
-			<li>{{ $tarea }}</li>
+			<li>
+				<a href="/tareas/{{ $tarea->id }}">{{ $tarea->titulo }}</a>
+			</li>
 		@endforeach
 	</ul>
 </body>

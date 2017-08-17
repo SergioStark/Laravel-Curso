@@ -50,7 +50,7 @@ composer "dump-autoload" cada que eliminemos algo del proyecto manualmente.
 
 php artisan make:migration create_tareas_table --create=tareas 
 
-tipos de datos que podemos utilizar para crear tablas en laravel -> documentacion -> database -> migrations
+tipos de datos que podemos utilizar para crear tablas en laravel -> documentacion -> database -> migrations->tablas
 
 EN MIGRACIONES ES DONDE SE ESPECIFICA LA ESTRUCTURA DE LA BASE DE DATOS
 
@@ -58,3 +58,12 @@ Si marca error de que la llave esta muy larga es por que la version del apache n
 documentacion->Indexes->Index Lengths & MySQL / MariaDB
 
 Para actualizar la estructura de la tabla: php artisan migrate:refresh
+
+MODELOS:
+
+Documentacion-> Elocuent->
+ORM-> engloba todos los datos de la base de datos para poder acceder a ellos mas facilmente
+php artisan make:model
+php artisan help make:model
+php php artisan make:model Product
+
