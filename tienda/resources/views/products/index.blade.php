@@ -8,11 +8,9 @@
 	<h1>Products</h1>
 	<ul>
 		@foreach($products as $product)
-			@if($product->existencia == 1)
-				<li>{{ $product->descripcion }} - ${{ $product->precio }} <b>en existencia</b></li>
-				@else
-				<li>{{ $product->descripcion }} - ${{ $product->precio }} <b>sin existencia</b></li>		
-			@endif 
+		
+				<a href="/detalle/{{ $product->id }}"><li>{{ $product->descripcion }}</li></a>		
+		
 		@endforeach
 
 	</ul>	

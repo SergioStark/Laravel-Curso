@@ -10,8 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Product;
 
 Route::get('/', function () {
-	$products = DB::table('products')->get();
+	//$products = Product::all();
+	$products = Product::precioAlto();
+	//dd($products);
     return view('products.index',compact('products'));
+});
+
+Route::get('/detalle/{id}', function ($id) {
+	$product = Product::find($id);
+
+    return view('products.detalle',compact('product'));
 });

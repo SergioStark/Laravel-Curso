@@ -67,3 +67,10 @@ php artisan make:model
 php artisan help make:model
 php php artisan make:model Product
 
+ejecutar php atisan tinker para habilitar el shell de elocuent
+
+Si le quitas los timestamps a laravel al momento de crear la bd, agregar lo siguiente en App/Product:
+public $timestamps = false; dentro de la clase
+Documentacion->Elocuent->Inserting->
+
+Para modificar la zona horaria ir a Config->app buscar en l pagina de php la configuracion de la zona horaria y remplazarlo en el archivo en la parte de timezone.   'timezone' => 'America/Mexico_City',America
