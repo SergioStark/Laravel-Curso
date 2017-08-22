@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Detalle</title>
-</head>
-<body>
+@extends('layouts.master')
+@section('content')
 	<h1> Producto: {{ $product->descripcion }} </h1>
 	<h2> Precio: ${{ $product->precio }} </h2>
 	<a href="/">Regresar</a>
-</body>
-</html>
+@endsection

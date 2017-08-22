@@ -74,3 +74,12 @@ public $timestamps = false; dentro de la clase
 Documentacion->Elocuent->Inserting->
 
 Para modificar la zona horaria ir a Config->app buscar en l pagina de php la configuracion de la zona horaria y remplazarlo en el archivo en la parte de timezone.   'timezone' => 'America/Mexico_City',America
+
+
+-----------COMANDO PARA CRER CONTROLADORES DESDE LARAVEL CON EL ADMNINISTRADOR DE COMANDOS--------------
+
+php artisan meake:controller + nombre del controlador.
+Generar las rutas en el archivo de web y en app->http->controller.php deveria de crearse el controlador
+
+Para saber como se llena un controlador ir a la documentacion de laravel:
+documentation->The basics->controllers-> Resource Controllers

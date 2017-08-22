@@ -10,17 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Product;
-
-Route::get('/', function () {
-	//$products = Product::all();
-	$products = Product::precioAlto();
-	//dd($products);
-    return view('products.index',compact('products'));
-});
-
-Route::get('/detalle/{id}', function ($id) {
-	$product = Product::find($id);
-
-    return view('products.detalle',compact('product'));
-});
+Route::get('/','ProductsController@index');
+Route::get('/detalle/{product}','ProductsController@show');
