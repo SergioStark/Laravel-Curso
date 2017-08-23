@@ -57,6 +57,10 @@ EN MIGRACIONES ES DONDE SE ESPECIFICA LA ESTRUCTURA DE LA BASE DE DATOS
 Si marca error de que la llave esta muy larga es por que la version del apache no es compatible con la que usa laravel, hay que cambiarlo de la siguiente forma:
 documentacion->Indexes->Index Lengths & MySQL / MariaDB
 
+app->Providers->AppServiceProvider = use Illuminate\Support\Facades\Schema;
+
+despues de llenar los campos en el modelo ejecutar el comando php artisan migrate
+
 Para actualizar la estructura de la tabla: php artisan migrate:refresh
 
 MODELOS:
@@ -65,7 +69,7 @@ Documentacion-> Elocuent->
 ORM-> engloba todos los datos de la base de datos para poder acceder a ellos mas facilmente
 php artisan make:model
 php artisan help make:model
-php php artisan make:model Product
+php artisan make:model Product
 
 ejecutar php atisan tinker para habilitar el shell de elocuent
 
@@ -83,3 +87,11 @@ Generar las rutas en el archivo de web y en app->http->controller.php deveria de
 
 Para saber como se llena un controlador ir a la documentacion de laravel:
 documentation->The basics->controllers-> Resource Controllers
+
+
+--------- COMO ACOMODAR LOS LAYOUTS------------
+
+
+
+------- COMO CREAR EL MODELO LA MIGRACION Y EL CONTROLADOR CON UN SOLO COMANDO------
+php artisan make:model [nombre del modelo] -mc

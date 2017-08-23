@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('contacto',function(){
-	return view('contacto');
-});
+Route::get('/','PostsController@index');
+Route::get('/posts/{post}','PostsController@show');

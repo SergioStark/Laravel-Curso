@@ -1,0 +1,23 @@
+Blog
+
+1. Crear un nuevo proyecto de Laravel 'blog'
+2. Crear la base de datos 'blog'
+3. Realizar las configuraciones para la base de datos
+	- .env
+	- AppServiceProvider
+4. Cr4ear todo lo necesario para modelo, controlador, migracion
+	- create_posts_tale -> Migracion
+		- nombre table: posts
+			- id
+			- title
+			- body
+			- timestamps
+	- PostsController -> Controlador
+	- Post -> Modelo
+5. Crear la estructura de layouts con un base (Bootstrap o Materialize)
+	- layouts/master.blade.php
+	- poosts/index.
+	- posts/show.blade.php
+6.Rutas
+	- / -> index
+	- /posts/{id} -> show
