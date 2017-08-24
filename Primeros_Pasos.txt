@@ -95,3 +95,10 @@ documentation->The basics->controllers-> Resource Controllers
 
 ------- COMO CREAR EL MODELO LA MIGRACION Y EL CONTROLADOR CON UN SOLO COMANDO------
 php artisan make:model [nombre del modelo] -mc
+
+
+------------PETICIONES DE TIPO POST--------------------
+buscar en la documentacion de laravel --> resource-controllers 
+
+laravel tiene una proteccion en sus formularios para evitar que aplicaciones fuera de laravel puedan hacer peticiones POST al formularios.
+Para habilitar esto hay que ir a la documentacion -> search ->csrf y copioar el cacho de codigo y pegarlo abajo del formulario.

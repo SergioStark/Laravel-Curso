@@ -25,8 +25,9 @@
 	</header>
 
 	<main>
-		<!-- CONTENIDO Variable-->
-		@yield('content') <!-- pone la parte del codigo que esta variando -->		
+		<div class="container">
+		@yield('content')			
+		</div>		
 	</main>
 
 	<footer>

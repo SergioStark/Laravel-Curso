@@ -17,4 +17,28 @@ class PostsController extends Controller
     {    	
     	return view('posts.show',compact('post'));
     }
+
+    public function create()
+    {
+		return view('posts.create');
+    }
+
+    public function store()
+    {
+    	//dd(request()->all());
+    	/*$post = new Post();
+    	$post->title = request('title');
+    	$post->body = request('body');
+    	$post->save();*/
+
+    	//equivalente a esto:
+
+    	Post::create(
+    		request(['title', 'body'])
+    		);
+
+    	//Post::create(request()->all()); //mandar todos los datos
+
+    	return redirect('/');
+    }
 }

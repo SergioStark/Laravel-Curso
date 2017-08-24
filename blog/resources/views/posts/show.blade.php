@@ -1,7 +1,9 @@
 @extends('layouts.master')
 @section('content')
-	<h2> Titulo: {{ $post->title }} </h2>
-	<p> Publicacion: ${{ $post->body }} </p>
+	<h1>{{ $post->title }} </h1>
+	<hr>
+	<p>{{ $post->created_at }} </p>
+	<p>Publicacion: ${{ $post->body }} </p>
 	<a href="/">Regresar</a>
 @endsection
 
