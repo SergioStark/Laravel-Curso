@@ -25,6 +25,6 @@
     </form>
   </div>
 
-
+@include('layouts.error')
 
 @endsection

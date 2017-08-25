@@ -102,3 +102,17 @@ buscar en la documentacion de laravel --> resource-controllers
 
 laravel tiene una proteccion en sus formularios para evitar que aplicaciones fuera de laravel puedan hacer peticiones POST al formularios.
 Para habilitar esto hay que ir a la documentacion -> search ->csrf y copioar el cacho de codigo y pegarlo abajo del formulario.
+
+
+-------- VALIDACIONES ----------
+
+basics-> validacion -> objeto validate
+
+Para manejar fechas en laravel buscarn en el navegador Carbon laravel -> es una libreria de laravel que maneja fechas
+
+------------ COMENTARIOS EN EL BLOG----------------
+documentacion -> laravel-> document -> relacionships-> 
+
+crear la migracion php artisan make:model Comment -m
+
+para hacer referencia a una llave foranea en la mmigracion se antepone el nombre de la tabla a que hace referencia mas _id de la tabla.

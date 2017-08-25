@@ -9,7 +9,8 @@ class PostsController extends Controller
 {
     public function index()
     {
-    	$posts=Post::all();
+    	//$posts=Post::all();
+        $posts=Post::latest()->get();
     	return view('posts.index',compact('posts'));
     }
 
@@ -25,10 +26,16 @@ class PostsController extends Controller
 
     public function store()
     {
+        //valida que estos campos no se envien vacios.
+        $this->validate(request(),array(
+            'title' => 'required',
+            'body' => 'required'
+            ));
     	//dd(request()->all());
     	/*$post = new Post();
     	$post->title = request('title');
     	$post->body = request('body');
+        $post->created_at = date();
     	$post->save();*/
 
     	//equivalente a esto:
