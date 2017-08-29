@@ -116,3 +116,9 @@ documentacion -> laravel-> document -> relacionships->
 crear la migracion php artisan make:model Comment -m
 
 para hacer referencia a una llave foranea en la mmigracion se antepone el nombre de la tabla a que hace referencia mas _id de la tabla.
+
+----------- CREAR UN PROYECTO DESDE CERO PARA LA AUTENTICACION DE USUARIOS (SCAFFOLD)--------------
+
+documentacion laravel -> Segurydad->autentication
+
+Routing -> php artisan make:auth
