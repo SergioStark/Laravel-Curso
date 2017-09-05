@@ -9,6 +9,7 @@
           <div class="card grey lighten-1">
             <div class="card-content white-text">
               <span class="card-title grey-text text-darken-4">{{ $post->title }}</span>
+              <p class="grey-text text-darken-4">Publicado por: {{ $post ->user->name }}</p>
               <p class="grey-text text-darken-4">{{ str_limit($post->body,50) }}</p>
             </div>
             <div class="card-action">

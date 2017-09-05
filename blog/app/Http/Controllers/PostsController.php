@@ -31,18 +31,20 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required'
             ));
+
     	//dd(request()->all());
-    	/*$post = new Post();
+    	$post = new Post();
     	$post->title = request('title');
     	$post->body = request('body');
-        $post->created_at = date();
-    	$post->save();*/
+        $post->user_id = auth()->user()->id;
+        $post->created_at = date('Y-m-d H:i:s');
+    	$post->save();
 
     	//equivalente a esto:
 
-    	Post::create(
+    	/*Post::create(
     		request(['title', 'body'])
-    		);
+    		);*/
 
     	//Post::create(request()->all()); //mandar todos los datos
 

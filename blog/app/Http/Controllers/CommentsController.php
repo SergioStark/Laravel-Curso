@@ -17,6 +17,7 @@ class CommentsController extends Controller
 
     	$comment = new Comment();
     	$comment->post_id = $post->id;
+        $comment->user_id = auth()->user()->id;
     	$comment->body = request('body');    	
         $comment->created_at = date("Y-m-d H:i:s");
     	$comment->save();

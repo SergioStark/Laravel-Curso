@@ -2,8 +2,9 @@
 @section('content')
 <h1>{{ $post->title }} </h1>
 <hr>
+<p>Publicado por: {{ $post->user->name }}</p>
 <p>{{ $post->created_at->toFormattedDateString() }} </p>
-<p>Publicacion: ${{ $post->body }} </p>
+<p>Publicacion: {{ $post->body }} </p>
 <a href="/">Regresar</a>
 
 <br>
@@ -13,6 +14,7 @@
 <br>
 
 <div class="row">
+	@if(Auth::check())	
 	<form class="col s12" method="POST" action="/posts/{{ $post->id }}/comments">
 			{{ csrf_field() }} 
 		<div class="row">
@@ -25,6 +27,9 @@
 	    <i class="material-icons right">send</i>
 	  </button>    		
 	</form>
+	@else
+    <p>Inicia sesion para poder comentar<a href="/register"> Clic aquí :)</a></p>    
+    @endif  
 </div>
 
 @include('layouts.error')
@@ -33,6 +38,7 @@
 	@foreach($post->comments as $comment) 	
 	<li class="collection-item">
 		{{ $comment->created_at->diffForHumans() }} <br>
+		Comentado por: {{ $comment->user->name }} <br>
 		{{ $comment->body }} <br>
 	</li>
 
